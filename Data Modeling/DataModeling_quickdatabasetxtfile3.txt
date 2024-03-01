@@ -1,0 +1,40 @@
+Department
+-
+dept_no PK
+dept_name
+
+
+Employee_Salaries
+-
+emp_no PK
+salary
+
+
+Job_Titles
+-
+title_id PK
+title
+
+
+Employees
+-
+emp_no PK FK - Employee_Salaries.emp_no
+emp_title_id FK - Job_Titles.title_id
+birth_date
+first_name
+last_name
+sex
+hire_date
+
+
+Department_Manager
+-
+dept_no FK - Department.dept_no
+emp_no FK - Employee_Salaries.emp_no
+
+
+Department_Employee
+-
+emp_no FK - Employee_Salaries.emp_no 
+dep_no FK - Department.dept_no
+
